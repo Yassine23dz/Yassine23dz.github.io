@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prénom Nom - Enseignant-Chercheur</title>
+    <style>
+        /* CSS : Le style visuel */
+        :root {
+            --primary-color: #2c3e50; /* Bleu foncé académique */
+            --accent-color: #3498db;  /* Bleu clair pour liens */
+            --bg-color: #f4f4f9;
+            --text-color: #333;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+        }
+
+        /* Navigation */
+        header {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-color);
+            margin-left: 20px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover { color: var(--accent-color); }
+
+        /* Contenu principal */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        /* Section Bio */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #ddd; /* Remplacer par votre image */
+        }
+
+        h1 { margin: 0; color: var(--primary-color); }
+        h2 { color: var(--primary-color); border-left: 4px solid var(--accent-color); padding-left: 10px; margin-top: 40px;}
+        
+        .role { font-style: italic; color: #666; }
+
+        /* Listes */
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        
+        .pub-date { font-weight: bold; color: var(--primary-color); }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        
+        /* Mobile */
+        @media (max-width: 600px) {
+            .profile-header { flex-direction: column; text-align: center; }
+            nav { flex-direction: column; }
+            .nav-links { margin-top: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div style="font-weight:bold; font-size:1.2rem;">Prénom Nom</div>
+            <div class="nav-links">
+                <a href="#about">Accueil</a>
+                <a href="#research">Recherche</a>
+                <a href="#publications">Publications</a>
+                <a href="#teaching">Enseignement</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="about" class="profile-header">
+            <img src="https://via.placeholder.com/150" alt="Photo de Prénom Nom" class="profile-img">
+            <div>
+                <h1>Prénom Nom, PhD</h1>
+                <p class="role">Maître de Conférences / Professeur des Universités</p>
+                <p>Laboratoire XYZ, Université de [Ville]</p>
+                <p>Je m'intéresse à [Domaine de recherche 1], [Domaine 2] et [Domaine 3]. Mon objectif est de comprendre comment...</p>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Recherche</h2>
+            <p>Mes travaux actuels portent sur...</p>
+            <ul>
+                <li><strong>Projet Alpha :</strong> Étude de la dynamique des fluides (Financement ANR).</li>
+                <li><strong>Collaboration Internationale :</strong> Avec l'Université de Tokyo sur...</li>
+            </ul>
+        </section>
+
+        <section id="publications">
+            <h2>Publications Récentes</h2>
+            <ul>
+                <li>
+                    <span class="pub-date">[2024]</span> 
+                    <strong>Nom, P.</strong>, Auteur, B. "Titre de l'article important." 
+                    <em>Journal of Science</em>, 45(2), 123-130. 
+                    <a href="#">[PDF]</a> <a href="#">[DOI]</a>
+                </li>
+                <li>
+                    <span class="pub-date">[2023]</span> 
+                    Auteur, C., <strong>Nom, P.</strong> "Titre de la conférence." 
+                    <em>Proceedings of IEEE...</em>
+                </li>
+            </ul>
+            <p><a href="https://scholar.google.com">Voir mon profil Google Scholar &rarr;</a></p>
+        </section>
+
+        <section id="teaching">
+            <h2>Enseignement</h2>
+            <p>J'enseigne principalement au département d'Informatique / Physique / Histoire.</p>
+            <ul>
+                <li><strong>Introduction à [Matière]</strong> (Licence 1)</li>
+                <li><strong>[Sujet Avancé]</strong> (Master 2 Recherche)</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>📧 Email : prenom.nom@univ-exemple.fr<br>
+            📍 Bureau : Bâtiment B, Salle 204<br>
+            🐦 Twitter/X : <a href="#">@votrehandle</a></p>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2024 Prénom Nom. Hébergé sur GitHub Pages / Université.
+    </footer>
+
+</body>
+</html>
